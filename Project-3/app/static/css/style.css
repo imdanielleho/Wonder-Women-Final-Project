@@ -1,0 +1,590 @@
+h1 {
+  text-align: center;
+  color: #56222E;
+  font-size: 2em;
+}
+
+.h1phase2 {
+  color: #D69549;
+}
+
+h3 {
+  color: #56222E;
+  font-size: 1em;
+  text-align: center;
+}
+
+.h3phase2 {
+  color: #D69549;
+}
+
+.h3phase2tool {
+font-size: 35px;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: verdana;
+  /* padding: 0;
+  margin: 0; */
+}
+
+#fem-map {
+  position: relative;
+  height: 600px;
+  width: 100%;  
+}
+
+#fem-map-sum {
+  position: relative;
+  height: 350px;
+  width: 100%;  
+}
+
+#gdp-map {
+  position: relative;
+  height: 600px; 
+  width: 100%;  
+}
+
+#gdp-map-sum {
+  position: relative;
+  height: 350px; 
+  width: 100%;  
+}
+
+
+
+.jumbotron {
+  text-align: center;
+  position: relative;
+  z-index:5;
+}
+
+.img-fluid {
+  /* text-align: center; */
+  position: rabsolute;
+  z-index:1;
+}
+
+.fourth-row {
+margin-top: 5%;
+}
+
+.text-box {
+  background-color: white;
+  opacity: 0.75;
+  border-radius: 8px;
+  margin: 1%;
+  z-index: 3;
+}
+
+.summary-text-box {
+  background-color: white;
+  opacity: 0.75;
+  border-radius: 8px;
+  z-index: 3;
+  font-size: .8em
+}
+
+.details-text-box {
+  background-color: white;
+  opacity: 0.75;
+  border-radius: 8px;
+  z-index: 3;
+  font: 13px verdana;
+}
+
+div.sticky-bottom {
+  z-index: 2;
+}
+
+div.fixed-bottom {
+  z-index: 1;
+}
+
+div.background {
+  opacity: 0.15;
+}
+
+.btn-dark {
+  background-color: #56222E;
+  z-index: 4;
+}
+.btn-darkphase2 {
+  background-color: #D69549;
+}
+ul.lead {
+  font-size: .9em
+}
+
+p.lead {
+  font-size: .9em
+}
+
+.leaflet-popup-content {
+  text-align: center;
+}
+
+.team {
+  margin: 0;
+  padding: 0
+}
+
+.names{
+text-indent: 1.3cm ;
+}
+/* CSS from the Leaflet-Choropleth documentation */
+.legend {
+  padding: 6px 8px;
+  font: 12px verdana;
+  font-weight: bold;
+  color: #555;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  line-height: 1.5em;
+  color: white;
+  width: 80%;
+  height: 80%;
+}
+
+/* color square indicating the square */
+.legend i {
+  width: 18px;
+  height: 1.5em;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.9;
+}
+
+.legend ul {
+  padding: 0;
+  margin: 0;
+  clear: both;
+  list-style-type: none;
+}
+
+.legend li {
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+.legend .min {
+  float: left;
+  padding-bottom: 5px;
+}
+.legend .max {
+  float: right;
+}
+
+.info {
+  background-color: #A9A9A9;
+  width: 40%;
+  color: white;
+  font-size: 10px;
+  padding: 1em;
+  line-height: 2em;
+  font-family: 'verdana';
+}
+
+.infoside {
+  background-color: #A9A9A9;
+  width: 120%;
+  color: white;
+  font-size: 10px;
+  padding: 1em;
+  line-height: 2em;
+  font-family: 'verdana';
+}
+
+.info h6 {
+  padding: 0;
+  margin-top: 0;
+  font-family: 'verdana';
+}
+h6 {
+  font-family: 'verdana';
+  font-weight: bold;
+}
+.infoside h3 {
+  padding: none;
+  font-weight: bold;
+  font-style: italic;
+  color: #ffd32a;
+  font-size: 12px;
+}
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #A9A9A9; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #bd5742; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #bd5742; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* _________________________________
+THE FOLLOWING IS CODE FOR THE TOOL: */
+/* 
+.adverb {
+  background: #c4e3f3;
+}
+
+.qualifier {
+  background: #c4e3f3;
+}
+
+.passive {
+  background: #c4ed9d;
+}
+
+.complex {
+  background: #e3b7e8;
+}
+
+.hardSentence {
+  background: #f7ecb5;
+}
+
+.veryHardSentence {
+  background: #e4b9b9;
+}
+
+#text-area,
+
+#output {
+  width: 100%;
+}
+
+#left {
+  width: 75%;
+  position: absolute;
+  left: 2.5%;
+}
+
+#right {
+  width: 20%;
+  position: absolute;
+  right: 2.5%;
+}
+
+.counter {
+  position: relative;
+  padding: 5% 5%;
+  margin: 5% 0 0 5%;
+  border-radius: 8px;
+} */
+
+/* _________________________________*/
+
+/* Tooltip container */
+.feminine {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  background: #dea297;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.feminine .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: white;
+  border: 1rem solid #dea297;
+  color: #dea297;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 120%;
+}
+
+.feminine .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 3%;
+  right: 111%;
+  margin-top: -7px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #dea297 transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.feminine:hover .tooltiptext {
+  visibility: visible;
+  cursor: pointer;
+}
+
+/* Tooltip container */
+.masculine {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  background: #F2C67A;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.masculine .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: white;
+  border: 1rem solid #F2C67A;
+  color: #F2C67A;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.masculine .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 3%;
+  right: 111%;
+  margin-top: -7px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #F2C67A transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.masculine:hover .tooltiptext {
+  visibility: visible;
+  cursor: pointer;
+
+}
+
+.Readability {
+
+ 
+  background: #FBEBBB;
+
+}
+
+/* Tooltip container */
+.pronoun {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  cursor: pointer;
+  background: #be6276;
+  
+}
+
+/* Tooltip text */
+.pronoun .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: white;
+  border: 1rem solid #b44c63;
+  color: #a63a52 ;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 125%;
+}
+
+.pronoun .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 3%;
+  right: 111%;
+  margin-top: -7px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #a63a52 transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.pronoun:hover .tooltiptext {
+  visibility: visible;
+  cursor: pointer;
+}
+
+
+
+
+
+/* Tooltip container */
+.superlative {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  cursor: pointer;
+  background: #c4ad8c;
+  
+}
+
+/* Tooltip text */
+.superlative .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: white;
+  border: 1rem solid #a18e71;
+  color: #a18e71 ;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.superlative .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 3%;
+  right: 111%;
+  margin-top: -7px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #a18e71 transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.superlative:hover .tooltiptext {
+  visibility: visible;
+  cursor: pointer;
+}
+
+
+
+
+.overallscore {
+  
+  background: #FBEBBB;
+ /* height: 110px;
+  width: 110px;
+  background-color:#FBEBBB;
+  border-radius: 50%;
+  border: dashed #56222e;*/
+  
+}
+.score {
+  
+  background: #FBEBBB;
+  
+  
+}
+.gendercoding {
+  
+  background: #FBEBBB;
+  
+}
+#text-area{
+  
+  border-radius: 6px;
+  text-align: left;
+  
+}
+
+#output {
+
+  width: 100%;
+
+}
+
+
+#left {
+
+  width: 75%;
+
+  position: absolute;
+
+  left: 2.5%;
+  
+
+}
+
+#right {
+
+  width: 20%;
+
+  position: absolute;
+
+  right: 2.5%;
+
+}
+
+
+
+.counter {
+
+  position: relative;
+
+  padding: 5% 5%;
+
+  margin: 5% 0 0 5%;
+
+  border-radius: 8px;
+
+}
+
+button{
+  background: #DAA095 ;
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-left :5px;
+}
+
+button:hover,
+button:focus {
+    background: #56222E;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}

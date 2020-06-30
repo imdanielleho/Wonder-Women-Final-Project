@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Leaflet CSS & JS-->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+    <!-- Set up CSS Style sheet -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Title of webpage -->
+    <title>Wonder Women | Final Project 2 | Proof of Gender Biased Job Descriptions</title>
+
+</head>
+
+<body>
+    
+    <!-- Navigation bar at top (sticky) -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #56222E;">
+        <a class="navbar-brand" href="index.html">Wonder Women</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+         <!-- Individually linked pages in navigation bar -->
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">GDP Overview</a>
+                  </li>
+                <li class="nav-item">
+                <a class="nav-link" href="summary.html">GDP Summary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="participation.html">Participation Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gdp.html">GDP Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bias.html">| Bias Overview</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Bias Summary<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="editor.html">Instructions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tool.html">Editor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ending.html">| About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    
+        <!-- Creates the overall grid layout of page (scaleable) -->
+    <div class="container-fluid">
+    
+        <!-- Row 1 = Title at Top -->
+        <div class="row" style="background-color: #FBEBBB;">
+            <!-- Sets top row to entire page width (12) -->
+            <div class="col-md-12 text-center">
+            <br>
+            <h1 class="display-4 h1phase2">Women in the Workforce</h1>
+            <br>
+            </div>
+        </div>
+        
+        <br>
+
+        <!-- Row 2 -->
+        <div class="row">
+            <!-- Lefthand column -->
+            <!-- Set first row's columns to half screen (50% width: 6), on mobile 'xs' and desktop 'md' -->
+            <div class="col-xs-6 col-md-6">
+                <h3 class= "h3phase2"><b>Ratio of Feminine and Masculine Words by Industry</b></h3>
+                <div class='tableauPlaceholder' id='viz1593473612201' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bu&#47;ButterflyChart_15934197629360&#47;ButterflyChart2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ButterflyChart_15934197629360&#47;ButterflyChart2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bu&#47;ButterflyChart_15934197629360&#47;ButterflyChart2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1593473612201');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+
+            <!-- Righthand column -->
+            <div class="col-xs-6 col-md-6">
+                <h3 class= "h3phase2"><b>Frequency of Feminine Words by Industry</b></h3>
+                <div class='tableauPlaceholder' id='viz1593473268055' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fe&#47;FeminineWordFrequency&#47;Distribution&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FeminineWordFrequency&#47;Distribution' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fe&#47;FeminineWordFrequency&#47;Distribution&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='no' /><param name='display_spinner' value='no' /><param name='display_overlay' value='no' /><param name='display_count' value='no' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1593473268055');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Row 3 -->
+        <div class="row">
+            <!-- Lefthand column -->
+            <div class="summary-text-box col-xs-6 col-md-6">
+                <p>The results presented in this visual confirm our hypothesis that male dominated industries possess a higher ratio of masculine words in their job descriptions, and female dominated industries possess a higher ratio of feminine words. In this case, male dominated industries (Financial Services, Computer Software, Aviation & Aerospace, Construction, and Security & Investigations) had more masculine gendered words; with Financial Services and Computer Software showing the largest variance in the masculine vs. feminine ratio. Most female dominated industries (Human Resources, Design & Graphics, Veterinary, and Environmental Services) had a higher ratio of feminine words, with the exception of one industry (Hospital & Healthcare), who's masculine ratio is marginally higher than the feminine ratio.</p>
+            </div>
+
+            <!-- Righthand column -->
+            <div class="summary-text-box col-xs-6 col-md-6">
+                <p> This visual represents the frequency of feminine words within each industry. In this case, industries in the "female dominant" category skew towards the right, indicating that feminine gendered words are extremely prevalent in job descriptions within those industries. The frequency of feminine words in the Veterinary industry for example is 48% higher than the frequency of masculine words in that industry. On the other hand, the industries in the "male dominant" category skew towards the left, indicating that masculine gendered words predominate. The frequency of feminine words in Aviation & Aerospace for example is 24% less than the frequency of masculine words.
+                </p>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="row fourth-row">
+            <!-- Lefthand column -->
+            <div class="col-xs-6 col-md-6">
+            <!-- <div class="col"> -->
+
+                <h3 class= "h3phase2"><b> Top 10 Masculine and Feminine Root Words</b></h3>
+                <script type='text/javascript' src='https://us-west-2b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 0px; height: 0px;'><object class='tableauViz' width='900' height='450' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-west-2b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;toshesvisualizations' /><param name='name' value='WordCounts_2&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /></object></div>
+            </div>
+
+            <!-- Righthand column -->
+            <div class="col-xs-6 col-md-6">
+                <h3 class= "h3phase2"><b>Word Cloud: 50 Most Frequently Used Words</b></h3>
+                <!-- <div> -->
+                  <script type='text/javascript' src='https://us-west-2b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 0px; height: 0px;'><object class='tableauViz' width='900' height='450' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-west-2b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;toshesvisualizations' /><param name='name' value='WordCounts_2&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='showAppBanner' value='false' /></object></div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="row">
+            <!-- Lefthand column -->
+            <div class="summary-text-box col-xs-6 col-md-6">
+                <p>The word count for masculine words is much higher than the word count for feminine words across the 5,000 job descriptions that were scraped and analyzed. The most frequently used masculine gendered root word "skill" is used over twice as much as the most frequently used feminine root word "respone"</p>
+            </div>
+
+            <!-- Righthand column -->
+            <div class="summary-text-box col-xs-6 col-md-6">
+                <p>Masculine words are used more frequently across the board. 36% of the 50 most frequently used words are feminine gendered.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+     
+       
+
+        <!-- Women's background image at bottom (scaleable) -->
+        <div class="background fixed-bottom text-center"><img src="../static/img/1RowOfWomen_shutterstock_1662016453_cropped.jpg" class="img-fluid" alt="Responsive image"/></div>
+    
+    </div>
+
+<!-- Copyright footer (centered) -->
+<footer class="container sticky-bottom text-center">
+    <p><small>© Wonder Women 2020</small></p> 
+</footer>
+
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="../static/js/linegraph.js"></script>
+<script src="../static/js/barchart.js"></script>
+<script type="text/javascript" src="../static/data/merged_workforce_data_geo.js"></script>
+<script type="text/javascript" src="../static/js/logic_summary.js"></script>
+<script type="text/javascript" src="../static/data/merged_GDP_data_geo.js"></script>
+<script type="text/javascript" src="../static/js/SliderControl.js"></script>
+<script type="text/javascript" src="../static/js/summary_gdp_choropleth.js"></script> -->
+
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Leaflet CSS & JS-->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+
+
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+     
+    <!-- Set up CSS Style sheet -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- Title of webpage -->
+    <title>Wonder Women | Project 2 | GDP Growth</title>
+
+</head>
+
+<body>
+    
+    <!-- Navigation bar at top (sticky) -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #56222E;">
+        <a class="navbar-brand" href="index.html">Wonder Women</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+         <!-- Individually linked pages in navigation bar -->
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">GDP Overview</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="summary.html">GDP Summary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="participation.html">Participation Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gdp.html">GDP Map</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="bias.html">| Bias Overview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="proof.html">Bias Summary</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Instructions<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tool.html">Editor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ending.html">| About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    
+        <!-- Creates the overall grid layout of page (scaleable) -->
+    <div class="container-fluid">
+    
+        <!-- Row 1 = Title at Top -->
+        <div class="row" style="background-color: #FBEBBB;">
+            <!-- Sets top row to entire page width (12) -->
+            <div class="col-md-12 text-center">
+            <br>
+            <h1 class="display-4 h1phase2">Women in the Workforce</h1>
+            <br>
+            </div>
+        </div>
+        
+        <br>
+
+        <!-- Row 2 -->
+        <div class="row">
+
+            <!-- Sets top row to entire page width (12) -->
+            <div class="col-md-12">
+                <br>
+                <h3 class= "h3phase2">
+                    <b>
+                    Wonder Women Editor
+                    </b>
+                </h3>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p> 
+
+            <br>
+            Our editor helps you to edit your job descriptions by highlighting gender-biased words within them. Research has shown that linguistic gender-coding in job descriptions puts women off applying for jobs that are advertised with masculine-coded language. So, use our tool to select neutral words in place of a gender-biased ones!
+            <br>
+            <br>
+            Begin your editing by pasting the document in the text-box. Once you're finished, click the "Click Me" button. To help you cut the gender-biased scourge from your document, Wonder-Women Editor highlights all instances of gender-biased words. You can make changes in real-time with the editor, which will show all the corresponding changes in different parameters of the tool.
+            <br>
+            <br>
+            Click the “Clear Input Fields” button to remove prior job descriptions and start fresh by pasting in another document and composing something new.
+            <br>
+            Click the “Save Job-Description” button to save all versions of your edited work.
+            <br>
+            <br>
+             This tool will take your existing job description, score it, and provide suggestions on word replacements in order to get a better score. The higher the score, the more likely you are to draw in a diverse pool of candidates.
+            <br>
+            <br>
+            A yellow highlight indicates that the word is masculine gendered, and a pink highlight indicates that the word is feminine gendered. Try editing these words to ensure that gender-coded language (example: ‘driven’ = masculine, ‘dependable’ = feminine) is reduced or removed. 
+             <br>
+             <br>
+             Gendered pronouns are helpfully highlighted in burgandy. Be aware of these words and choose gender-neutral pronouns without bias in exchange. Alternatively, include both feminine and masculine pronouns (e.g., “she/he”) instead. 
+            <br>  
+            <br> 
+            Superlative words, such as "perfection" and "rockstar" are marked in brown. With the aid of the tool, you can change your job description wording and eliminate those words if required.   
+            <br>
+ 
+        </p>
+         </div>
+
+       </div>
+        <!-- Women's background image at bottom (scaleable) -->
+        <div class="background fixed-bottom text-center"><img src="../static/img/1RowOfWomen_shutterstock_1662016453_cropped.jpg" class="img-fluid" alt="Responsive image"/></div>
+
+
+    </div>
+
+<!-- Copyright footer (centered) -->
+<footer class="container sticky-bottom text-center">
+    <p><small>© Wonder Women 2020</small></p> 
+</footer>
+
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script>
+<script type="text/javascript" src="../static/data/merged_GDP_data_geo.js"></script>
+<script type="text/javascript" src="../static/js/SliderControl.js"></script>
+<script type="text/javascript" src="../static/js/detail_gdp_choropleth.js"></script>  -->
+
+</body>
