@@ -13,6 +13,6 @@ To use our tool, insert your job description in the text box. Then, your job des
 
 We know that companies with diverse workforce perform better and produce more innovative outcomes, so use our tool to draw in a more diverse pool of candidates and ultimately improve the productivity of your company!
 
+Website: http://wonderwomen.pythonanywhere.com/index.html
 
-![Wonder Women](/app/static/img/1RowOfWomen_shutterstock_1662016453_cropped.jpg)
 
