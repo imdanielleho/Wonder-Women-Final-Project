@@ -30,6 +30,13 @@
     <!-- Set up CSS Style sheet -->
     <link rel="stylesheet" href="../static/css/style.css">
 
+    <!-- Dropdwon Menu -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <!-- Title of webpage -->
     <title>Wonder Women | Final Project | GDP Growth</title>
 
@@ -47,32 +54,28 @@
          <!-- Individually linked pages in navigation bar -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">GDP and Female Participation</a>
+                <div class="dropdown-menu">
+                    <a href="index.html" class="dropdown-item">GDP Overview</a>
+                    <a href="summary.html" class="dropdown-item">GDP Summary</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="participation.html" class="dropdown-item">Participation Map</a>
+                    <a href="gdp.html" class="dropdown-item active">GDP Map</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gender Bias</a>
+              <div class="dropdown-menu">
+                  <a href="bias.html" class="dropdown-item">Bias Overview</a>
+                  <a href="proof.html" class="dropdown-item">Bias Summary</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="editor.html" class="dropdown-item">Instructions</a>
+                  <a href="tool.html" class="dropdown-item"> Editor</a>
+              </div>
+            </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">GDP Overview</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="summary.html">GDP Summary</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="participation.html">Participation Map</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">GDP Map<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="bias.html">| Bias Overview</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="proof.html">Bias Summary</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="editor.html">Instructions</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="tool.html">Editor</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ending.html">| About</a>
+                <a class="nav-link" href="ending.html">About</a>
               </li>
             </ul>
           </div>

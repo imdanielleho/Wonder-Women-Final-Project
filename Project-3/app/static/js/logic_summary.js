@@ -136,8 +136,9 @@ displayInfoFem.addTo(myMapFem);
 
 
  // Happens on mouse hover
- function highlightFem(e) {
-    var layer_fem = e.target;
+ $('foo').bind('mouseover', function () {
+  // inside here, `this` will refer to the foo that was clicked
+  var layer_fem = `this`;
 
     layer_fem.setStyle({
         weight: 3,
@@ -150,7 +151,31 @@ displayInfoFem.addTo(myMapFem);
 
     // Updates custom legend on hover
     displayInfoFem.update(layer_fem.feature.properties);
-  }
+});
+
+
+ // Happens on mouse hover
+ $('foo').bind('mouseout', function () {
+  // inside here, `this` will refer to the foo that was clicked
+  vgeojson.resetStyle(`this`);
+  displayInfoFem.update();
+});
+
+//  function highlightFem(e) {
+//     var layer_fem = e.target;
+
+//     layer_fem.setStyle({
+//         weight: 3,
+//         color: '#ffd32a'
+//     });
+
+//     if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+//         layer_fem.bringToFront();
+//     }
+
+//     // Updates custom legend on hover
+//     displayInfoFem.update(layer_fem.feature.properties);
+//   }
 
   // Happens on mouse out
   function resetFem(e) {
