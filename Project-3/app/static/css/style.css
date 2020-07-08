@@ -558,13 +558,13 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 
 #output {
 
-  width: 100%;
+  width: 900px;
   text-align: left;
 
 }
 
 
-#left {
+/* #left {
 
   width: 70%;
 
@@ -573,10 +573,15 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
   left: 2.5%;
   
 
-}
+} */
 
 .col-8{
-  margin-left: -60px;
+  /* margin-left: -70px; */
+  width: 100%;
+
+  /* position: absolute; */
+
+  left: -9%;
 }
 
 
@@ -590,11 +595,12 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 
 } */
 
-.col-4{
-  padding-left: 60px;
-  margin-left: 60px;
+/* .col-4{
+  padding-left: 100px;
+  margin-left: 70px;
+  z-index: -1;
 
-}
+} */
 
 
 
