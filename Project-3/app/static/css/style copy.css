@@ -16,8 +16,6 @@ h3 {
 
 .h3phase2 {
   color: #D69549;
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .h3phase2tool {
@@ -309,14 +307,6 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 
 /* Tooltip container */
 .feminine {
- 
-  /* display: inline-block;
-  border-bottom: 1px dotted black;  */
-  background: #dea297;
- 
-}
-
-.span_fem {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
@@ -325,7 +315,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 }
 
 /* Tooltip text */
-.span_fem .tooltiptext {
+.feminine .tooltiptext {
   visibility: hidden;
   width: 180px;
   background-color: white;
@@ -343,7 +333,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
   left: 120%;
 }
 
-.span_fem .tooltiptext::after {
+.feminine .tooltiptext::after {
   content: "";
   position: absolute;
   top: 3%;
@@ -355,22 +345,13 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.span_fem:hover .tooltiptext {
+.feminine:hover .tooltiptext {
   visibility: visible;
   cursor: pointer;
 }
 
-
-
-
-
-.masculine {
-  /* display: inline-block;
-  border-bottom: 1px dotted black;  */
-  background: #F2C67A;
-}
 /* Tooltip container */
-.span_mas {
+.masculine {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
@@ -379,7 +360,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 }
 
 /* Tooltip text */
-.span_mas .tooltiptext {
+.masculine .tooltiptext {
   visibility: hidden;
   width: 180px;
   background-color: white;
@@ -396,7 +377,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
   left: 110%;
 }
 
-.span_mas .tooltiptext::after {
+.masculine .tooltiptext::after {
   content: "";
   position: absolute;
   top: 3%;
@@ -408,7 +389,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.span_mas:hover .tooltiptext {
+.masculine:hover .tooltiptext {
   visibility: visible;
   cursor: pointer;
 
@@ -421,23 +402,18 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 
 }
 
-
-.pronoun {
-  /* display: inline-block;
-  border-bottom: 1px dotted black; */
-  background: #be6276;
-}
 /* Tooltip container */
-.span_pronoun {
+.pronoun {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
   cursor: pointer;
   background: #be6276;
+  
 }
 
 /* Tooltip text */
-.span_pronoun .tooltiptext {
+.pronoun .tooltiptext {
   visibility: hidden;
   width: 180px;
   background-color: white;
@@ -454,7 +430,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
   left: 125%;
 }
 
-.span_pronoun .tooltiptext::after {
+.pronoun .tooltiptext::after {
   content: "";
   position: absolute;
   top: 3%;
@@ -466,21 +442,17 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.span_pronoun:hover .tooltiptext {
+.pronoun:hover .tooltiptext {
   visibility: visible;
   cursor: pointer;
 }
 
 
-.superlative {
-  /* display: inline-block;
-  border-bottom: 1px dotted black;  */
-  background: #c4ad8c;
-  
-}
+
+
 
 /* Tooltip container */
-.span_sup {
+.superlative {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
@@ -490,7 +462,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 }
 
 /* Tooltip text */
-.span_sup .tooltiptext {
+.superlative .tooltiptext {
   visibility: hidden;
   width: 180px;
   background-color: white;
@@ -507,7 +479,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
   left: 110%;
 }
 
-.span_sup .tooltiptext::after {
+.superlative .tooltiptext::after {
   content: "";
   position: absolute;
   top: 3%;
@@ -519,7 +491,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.span_sup:hover .tooltiptext {
+.superlative:hover .tooltiptext {
   visibility: visible;
   cursor: pointer;
 }
@@ -552,40 +524,28 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
   
   border-radius: 6px;
   text-align: left;
-  width: 60%;
   
 }
 
 #output {
 
-  width: 900px;
-  text-align: left;
+  width: 100%;
 
 }
 
 
-/* #left {
+#main {
 
-  width: 70%;
+  width: 75%;
 
   position: absolute;
 
   left: 2.5%;
   
 
-} */
-
-.col-8{
-  /* margin-left: -70px; */
-  width: 100%;
-
-  /* position: absolute; */
-
-  left: -9%;
 }
 
-
-/* #right {
+#col-3 {
 
   width: 20%;
 
@@ -593,14 +553,7 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
 
   right: 2.5%;
 
-} */
-
-/* .col-4{
-  padding-left: 100px;
-  margin-left: 70px;
-  z-index: -1;
-
-} */
+}
 
 
 
@@ -613,11 +566,6 @@ THE FOLLOWING IS CODE FOR THE TOOL: */
   margin: 5% 0 0 5%;
 
   border-radius: 8px;
-
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-  font-size: 15px;
-
 
 }
 

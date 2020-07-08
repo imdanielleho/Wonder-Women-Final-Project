@@ -68,7 +68,63 @@
       counters();
   
       outputArea.innerHTML = inP.join(" ");
-  
+      
+      document.querySelectorAll('.span_fem').forEach(item => {
+        item.addEventListener('mouseover', event => {
+          femInFunction()})
+        item.addEventListener('mouseout', event => {
+            femOutFunction();
+        })
+      })
+
+      function femInFunction() {
+        document.getElementById("feminine").style.border = "thick solid #fab6aa ";} 
+
+      function femOutFunction() {
+        document.getElementById("feminine").style.border = "transparent";}
+
+      document.querySelectorAll('.span_mas').forEach(item => {
+        item.addEventListener('mouseover', event => {
+            masInFunction()})
+        item.addEventListener('mouseout', event => {
+              masOutFunction();
+          })
+      })
+
+      function masInFunction() {
+        document.getElementById("masculine").style.border = "thick solid #fac15e";} 
+          
+      function masOutFunction() {
+        document.getElementById("masculine").style.border = "transparent";}
+      
+       document.querySelectorAll('.span_pronoun').forEach(item => {
+        item.addEventListener('mouseover', event => {
+            pronounInFunction()})
+        item.addEventListener('mouseout', event => {
+            pronounOutFunction();
+            })
+        })
+
+      function pronounInFunction() {
+        document.getElementById("pronoun").style.border = "thick solid #d3687f";} 
+                
+      function pronounOutFunction() {
+        document.getElementById("pronoun").style.border = "transparent";}
+        
+     
+       document.querySelectorAll('.span_sup').forEach(item => {
+        item.addEventListener('mouseover', event => {
+            supInFunction()})
+        item.addEventListener('mouseout', event => {
+            supOutFunction();
+            })
+        })           
+             
+      function supInFunction() {
+        document.getElementById("superlative").style.border = "thick solid #d6b78c";} 
+                
+      function supOutFunction() {
+        document.getElementById("superlative").style.border = "transparent";}
       
   
     }
@@ -471,8 +527,8 @@
             data.masculine += 1;
   
            // return `<span class="masculine">${word} <tltp class="tooltiptext"><b> ${word} : is a Masculine Word!!</b></tltp> </span>`;
-           return `<span class="masculine">${word} <tltp class="tooltiptext"><b>${getMasToolTip(word)} </b></tltp> </span>`;
-  
+           return `<span class="span_mas" style="background-color:#F2C67A;">${word} <tltp class="tooltiptext"><b>${getMasToolTip(word)} </b></tltp> </span>`;
+
           } else {
   
             return word;
@@ -506,7 +562,7 @@
               data.feminine+= 1;
     
               //return `<span class="feminine">${word} <tltp class="tooltiptext"> <b> ${word} : is a Feminine  Word!!</b></tltp> </span>`;
-              return `<span class="feminine">${word} <tltp class="tooltiptext"><b>${getFemToolTip(word)} </b></tltp> </span>`;
+              return `<span class="span_fem" style="background-color:#dea297;">${word} <tltp class="tooltiptext"><b>${getFemToolTip(word)} </b></tltp> </span>`;
   
             } else {
     
@@ -558,7 +614,7 @@
         data.masculinePronoun += 1;
   
       //  return `<span class="pronoun">${word}</span>`;
-      return `<span class="pronoun">${word} <tltp class="tooltiptext"> <b> ${word} : is a Masculine Gendered Pronoun Word!!<br><br> Try to replace them with "a student" , "he or she" , "he/she" , "s/he" , "her/him".</b></tltp> </span>`;
+      return `<span class="span_pronoun" style="background-color:#be6276;">${word} <tltp class="tooltiptext"> <b> ${word} : is a Masculine Gendered Pronoun Word!!<br><br> Try to replace them with "a student" , "he or she" , "he/she" , "s/he" , "her/him".</b></tltp> </span>`;
   
       } else if (
   
@@ -572,7 +628,7 @@
         data.femininePronoun += 1;
         
       //  return `<span class="pronoun">${word}</span>`;
-      return `<span class="pronoun">${word} <tltp class="tooltiptext"> <b> ${word} : is a Feminine Gendered Pronoun  Word!!<br><br> Try to replace them with "a student" , "he or she" , "he/she" , "s/he" , "her/him".</b></tltp> </span>`;
+      return `<span class="span_pronoun" style="background-color:#be6276;">${word} <tltp class="tooltiptext"> <b> ${word} : is a Feminine Gendered Pronoun  Word!!<br><br> Try to replace them with "a student" , "he or she" , "he/she" , "s/he" , "her/him".</b></tltp> </span>`;
   
       } else {
   
@@ -602,7 +658,7 @@
               data.superlative += 1;
              // return `<span  class="superlative">${word}</span>`;
              //return `<span class="superlative">${word} <tltp class="tooltiptext"> <b> ${word} : is a Superlative Word!!</b></tltp> </span>`;
-             return `<span class="superlative">${word} <tltp class="tooltiptext"><b>${getSupToolTip(word)} </b></tltp> </span>`;
+             return `<span class="span_sup" style="background-color:#c4ad8c;">${word} <tltp class="tooltiptext"><b>${getSupToolTip(word)} </b></tltp> </span>`;
   
             } else {
               return word;
